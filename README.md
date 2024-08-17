@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Cloud-Upload
 
 This project uses React with Vite.

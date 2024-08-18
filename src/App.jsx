@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
-import Signup from './components/signup'
-import Home  from './components/Home';
-import Start from './components/Start';
+const Signup = React.lazy(() => import('./components/signup'));
+const Home = React.lazy(() => import('./components/Home'));
+const Start = React.lazy(() => import('./components/Start'));
+
+
 // const MyComponent = () => import('./MyComponent');
 function App() {
   // const [isStart,setIsStart] = useState(false)
@@ -47,6 +49,7 @@ function App() {
 
   return (
     <Router>
+      <Suspense fallback={<div>Loading...</div>}>
       <Routes>
                 <Route path="/signup" element={<Signup />} />
         <Route path="/" element= {<Start/>} />
@@ -59,6 +62,7 @@ function App() {
           element={<Home/>}
         />
       </Routes>
+      </Suspense>
     </Router>
   );
 }

@@ -7,6 +7,7 @@ export default defineConfig({
   base: '/', // This is the default, change if needed
   build: {
     outDir: 'dist',
+    chunkSizeWarningLimit: 1000, 
   },
   server: {
     historyApiFallback: true,

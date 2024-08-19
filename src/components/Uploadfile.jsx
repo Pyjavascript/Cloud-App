@@ -4,7 +4,7 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { app } from "../firebase/firebaseConfig";
-const Filelist = React.lazy(() => import('./components/Filelist'));
+const Filelist = React.lazy(() => import('./Filelist'));
 
 function FileUpload() {
     const [file, setFile] = useState(null);

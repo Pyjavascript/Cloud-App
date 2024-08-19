@@ -43,8 +43,8 @@ function App() {
   }
 
   return (
-    <Router>
-      <Routes basename="/Cloud-App">
+    <Router basename="/Cloud-App">
+      <Routes>
         <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<Start />} />
         <Route path="/User" element={<Signup />} />

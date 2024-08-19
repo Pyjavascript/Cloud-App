@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { getAuth } from "firebase/auth";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
 import { useNavigate } from 'react-router-dom';
-const Filelist = React.lazy(() => import('./Filelist'));
-const Uploadfile = React.lazy(() => import('./Uploadfile'));
-
+// const Filelist = React.lazy(() => import('./Filelist'));
+// const Uploadfile = React.lazy(() => import('./Uploadfile'));
+// import FileList from "./Filelist";
+// import Uploadfile from "./Uploadfile";
 function Home() {
   const [isNav,SetisNav] = useState(false);
   const [userData, setUserData] = useState(null);

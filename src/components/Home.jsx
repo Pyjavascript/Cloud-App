@@ -2,10 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getAuth } from "firebase/auth";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
 import { useNavigate } from 'react-router-dom';
-// const Filelist = React.lazy(() => import('./Filelist'));
-// const Uploadfile = React.lazy(() => import('./Uploadfile'));
-// import FileList from "./Filelist";
-// import Uploadfile from "./Uploadfile";
+
 function Home() {
   const [isNav,SetisNav] = useState(false);
   const [userData, setUserData] = useState(null);
@@ -24,8 +21,6 @@ function Home() {
         const userDoc = await getDoc(userDocRef);
         if (userDoc.exists()) {
           setUserData(userDoc.data());
-        } else {
-          // console.log("No such document!");
         }
       }
     };
@@ -37,7 +32,7 @@ function Home() {
   }
   return (
     <>
-      <div className="bg-[#f1f5fb] w-screen h-screen relative">
+      <div className="bg-[#f1f5fb] sm:bg-orange-500  w-screen h-screen relative">
         <div className=" p-2 w-full flex justify-between items-center">
         <ion-icon name="menu-outline"></ion-icon>
 

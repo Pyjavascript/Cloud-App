@@ -32,7 +32,7 @@ function Home() {
   }
   return (
     <>
-      <div className="bg-[#f1f5fb] sm:bg-orange-500  w-screen h-screen relative">
+      <div className="bg-[#f1f5fb]  w-screen h-screen relative">
         <div className=" p-2 w-full flex justify-between items-center">
         <ion-icon name="menu-outline"></ion-icon>
 

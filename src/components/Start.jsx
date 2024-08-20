@@ -10,7 +10,7 @@ function Start() {
 
   return (
     <>
-    <div className='lg:relative w-screen h-screen bg-[#f1f5fb]'>
+    <div className='lg:relative w-screen h-screen bg-[#f1f5fb] md:bg-orange-500'>
         <div className='h-full w-full flex flex-col justify-between p-6 rounded-md lg:'>
           <p className='text-purple-600'>Coderado.io</p>
         <div className='lg:w-1/2'>

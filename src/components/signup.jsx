@@ -47,8 +47,8 @@ function Signup() {
  
 
   return (
-    <main className='main bg-[#f1f5fb] w-screen h-screen flex flex-col justify-center items-center relative'>
-      <div className='flex flex-col gap-5 min-w-min max-w-sm p-2 px-10 rounded-lg'>
+    <main className='main bg-[#f1f5fb] w-screen h-screen flex flex-col justify-center items-center relative overflow-hidden'>
+      <div className='flex flex-col gap-5 min-w-min max-w-sm p-2 px-14 rounded-lg'>
         <div>
         <h2 className='text-left font-bold text-4xl'>{isNewUser ? 'Sign Up' : 'Sign In'}</h2>
         <p className='text-slate-400 mt-1'>enjoy the free storage.</p>
@@ -97,9 +97,7 @@ function Signup() {
         </form>
 
       </div>
-      <div className='bg-black'>
-
-      </div>
+      
     </main>
   );
 }

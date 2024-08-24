@@ -32,7 +32,7 @@ function Home() {
     SetisNav(e => !e)
   }
   const Account = () => {
-    navigate('/Account');
+    navigate('/account');
   }
   return (
     <>

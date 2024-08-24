@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getAuth } from "firebase/auth";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
 import { useNavigate } from 'react-router-dom';
+import Account from "./Account";
 
 function Home() {
   const [isNav,SetisNav] = useState(false);
@@ -30,6 +31,9 @@ function Home() {
   const handleUserOpt = () => {
     SetisNav(e => !e)
   }
+  const Account = () => {
+    navigate('/Account');
+  }
   return (
     <>
       <div className="bg-[#f1f5fb]  w-screen h-screen relative">
@@ -49,7 +53,7 @@ function Home() {
 
         )} */}
         <div className={`lg:w-1/6 overflow-hidden transition-all ${isNav? "absolute":"hidden"} right-0 bg-white flex flex-col justify-start items-center  w-1/2 border-2 rounded-lg`}>
-        <button className="p-1 py-2 px-2 w-full hover:bg-purple-600 hover:text-white border-b-2">Account</button>
+        <button className="p-1 py-2 px-2 w-full hover:bg-purple-600 hover:text-white border-b-2" onClick={Account}>Account</button>
         <button className="p-1 py-2 px-2 w-full hover:bg-purple-600 hover:text-white border-b-2">User Data</button>
         <button onClick={handleLogoutClick} className="text-red-500 w-full px-2 p-1 hover:bg-red-200 py-2">Logout</button>
         </div>
